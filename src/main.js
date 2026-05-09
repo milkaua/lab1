@@ -8,8 +8,8 @@ app.innerHTML = `
       <div class="header-inner">
         <span class="logo">⬡ IT Lab</span>
         <nav>
-          <a href="#labs">Лабораторні</a>
-          <a href="#about">Про проєкт</a>
+          <a href="/">Лабораторні</a>
+          <a href="/about.html">Про проєкт</a>
         </nav>
       </div>
     </header>
