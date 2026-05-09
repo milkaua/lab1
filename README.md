@@ -13,14 +13,8 @@
 ## 🚀 Запуск проєкту
 
 ```bash
-# 1. Встановити залежності
 npm install
-
-# 2. Запустити dev-сервер
 npm run dev
-
-# 3. Зібрати продакшн-версію
-npm run build
 ```
 
 ---
@@ -40,11 +34,13 @@ npm run build
 
 ```
 it-project-lab/
-├── index.html          # HTML-точка входу
+├── index.html
+├── about.html
 ├── src/
-│   ├── main.js         # Головна логіка
-│   └── style.css       # Стилі
-├── public/             # Статичні ресурси
+│   ├── main.js
+│   ├── about.js
+│   └── style.css
 ├── .gitignore
+├── package.json
 └── README.md
 ```
