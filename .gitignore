@@ -19,3 +19,9 @@ Thumbs.db
 
 # Vite cache
 .vite/
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.user
