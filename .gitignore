@@ -24,3 +24,9 @@ Thumbs.db
 *.log
 logs/
 npm-debug.log*
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.user
