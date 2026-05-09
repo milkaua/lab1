@@ -5,7 +5,7 @@ node_modules/
 dist/
 build/
 
-# Environment variables (НІКОЛИ не комітити!)
+# Environment variables
 .env
 .env.local
 .env.*.local
@@ -19,3 +19,8 @@ Thumbs.db
 
 # Vite cache
 .vite/
+
+# Log files
+*.log
+logs/
+npm-debug.log*
