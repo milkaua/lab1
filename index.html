@@ -3,11 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IT Project Lab</title>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>Task Manager · IT Project Lab</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="app">
+      <header class="header">
+        <div class="header-inner">
+          <span class="logo">⬡ Task Manager</span>
+          <span class="header-sub">IT Project Lab · Лаб. 06</span>
+        </div>
+      </header>
+
+      <div class="stats">
+        <div class="stat-box"><div class="stat-num" id="stats-total">0</div><div class="stat-label">Всього</div></div>
+        <div class="stat-box"><div class="stat-num accent" id="stats-progress">0</div><div class="stat-label">В роботі</div></div>
+        <div class="stat-box"><div class="stat-num" id="stats-done">0</div><div class="stat-label">Виконано</div></div>
+        <div class="stat-box"><div class="stat-num accent" id="stats-rate">0%</div><div class="stat-label">Прогрес</div></div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-track"><div class="progress-fill" id="progress-bar" style="width:0%"></div></div>
+        <div class="progress-info"><span>Прогрес виконання</span><span id="stats-overdue"></span></div>
+      </div>
+
+      <form class="add-form" id="add-form">
+        <input type="text" id="new-title" placeholder="Нове завдання..." required />
+        <select id="new-priority">
+          <option value="high">🔴 Високий</option>
+          <option value="medium" selected>🟡 Середній</option>
+          <option value="low">🟢 Низький</option>
+        </select>
+        <input type="date" id="new-deadline" />
+        <button type="submit" class="btn-add">+ Додати</button>
+      </form>
+
+      <div class="controls">
+        <div class="filter-row">
+          <span class="filter-label">Статус</span>
+          <button class="filter-btn active" data-status-filter="all">Всі</button>
+          <button class="filter-btn" data-status-filter="todo">To Do</button>
+          <button class="filter-btn" data-status-filter="in_progress">In Progress</button>
+          <button class="filter-btn" data-status-filter="done">Done</button>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label">Пріоритет</span>
+          <button class="filter-btn active" data-priority-filter="all">Всі</button>
+          <button class="filter-btn" data-priority-filter="high">Високий</button>
+          <button class="filter-btn" data-priority-filter="medium">Середній</button>
+          <button class="filter-btn" data-priority-filter="low">Низький</button>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label">Lab 6</span>
+          <button class="filter-btn" data-feature-flag="show-urgent-filter" hidden>Urgent Only</button>
+        </div>
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="search" placeholder="Пошук завдань..." />
+        </div>
+      </div>
+
+      <div id="task-list"></div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

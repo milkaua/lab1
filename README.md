@@ -1,46 +1,46 @@
-# IT Project Lab 🧪
+# IT Project Lab — Task Manager 🧪
 
-Навчальний проєкт для виконання лабораторних робіт з курсу **«Управління IT-проєктами»**.
+MVP для Лабораторної роботи №2: **Забезпечення якості через тестування**.
 
-## Стек технологій
+## Стек
 
-- [Vite](https://vitejs.dev/) — збірник та dev-сервер
-- Vanilla JavaScript (ES Modules)
-- CSS змінні + Google Fonts
+- Vite + Vanilla JS
+- **Vitest** — Unit тести + Code Coverage
+- **Playwright** — E2E тести
 
----
-
-## 🚀 Запуск проєкту
+## Запуск
 
 ```bash
 npm install
 npm run dev
 ```
 
----
+## Тести
 
-## 📋 Лабораторні роботи
+```bash
+# Unit тести
+npm run test:unit
 
-| # | Назва | Статус |
-|---|-------|--------|
-| 01 | Управління кодом та організація робочого простору в Git | ✅ Активна |
-| 02 | Agile та Scrum: організація спринту | 🔜 Upcoming |
-| 03 | CI/CD та автоматизація процесів | 🔜 Upcoming |
-| 04 | Управління задачами та документація | 🔜 Upcoming |
+# Unit тести + Coverage звіт
+npm run test:unit:coverage
 
----
+# E2E тести (потребує запущеного dev-сервера)
+npm run test:e2e
 
-## Структура проєкту
+# UI режим Vitest
+npm run test:unit:ui
+```
+
+## Структура
 
 ```
-it-project-lab/
 ├── index.html
-├── about.html
 ├── src/
-│   ├── main.js
-│   ├── about.js
-│   └── style.css
-├── .gitignore
-├── package.json
-└── README.md
+│   ├── tasks.js          ← бізнес-логіка (чисті функції)
+│   ├── tasks.test.js     ← Unit тести (Vitest)
+│   └── main.js / style.css
+├── tests/
+│   └── app.spec.js       ← E2E тести (Playwright)
+├── vite.config.js
+└── playwright.config.js
 ```
